@@ -11,11 +11,11 @@ Various operation implementations in C for my calculator project
 * Round
 * Floor
 * Ceil
+* Pow
 
 ## Functions in development
 
 * Trig Functions
-* Pow
 * Root
 
 NOTE: everything here will (hopefully) be accurate to the 15th decimal point (because doubles are 15 decimals)
