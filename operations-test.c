@@ -4,6 +4,6 @@
 
 int main() {
     printf("%i\n", clock());
-    printf("%f\n", log(100, 10));
+    printf("%f\n", _int_root(4, 2));
     printf("%i", clock());
 }
