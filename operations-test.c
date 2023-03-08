@@ -4,6 +4,6 @@
 
 int main() {
     printf("%i\n", clock());
-    printf("%f\n", pow(4.1, 2.5));
+    printf("%f\n", pow(2, 2));
     printf("%i", clock());
 }

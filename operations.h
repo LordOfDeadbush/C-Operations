@@ -3,6 +3,12 @@ const double PI = 3.14159265358979323846;
 const double MAX_DECIMAL_PRECISION = 7;
 
 
+double abs(double x) {
+    if (x < 0) return -x;
+    return x;
+}
+
+
 double _int_pow(double x, int n) {
     double result = 1;
     for (int i = 0; i < abs(n); i++) {
@@ -42,10 +48,6 @@ double _int_root(double x, int n) { // this version of root is to find the nth r
 }
 
 
-double abs(double x) {
-    if (x < 0) return -x;
-    return x;
-}
 
 double ln(double x) {
     // explanation here: https://en.wikipedia.org/wiki/Natural_logarithm#Integral_definition
@@ -64,7 +66,7 @@ double log(double x, double n) { // in the form log sub a
 double floor(double x) { return (int) x; }
 double ceil(double x) { return ((int) x) + 1; }
 
-int round(double x) {
+double round(double x) {
     double f = floor(x);
     double decimal = x - f;
     if (decimal > 0.5) { return f + 1; }
