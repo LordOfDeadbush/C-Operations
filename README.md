@@ -8,6 +8,9 @@ Various operation implementations in C for my calculator project
 * Absolute Value
 * Pow to an int
 * Root to an int
+* Round
+* Floor
+* Ceil
 
 ## Functions in development
 

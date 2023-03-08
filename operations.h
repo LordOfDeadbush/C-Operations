@@ -60,3 +60,15 @@ double ln(double x) {
 double log(double x, double n) { // in the form log sub a
     return ln(x) / ln(n);
 }
+
+double floor(double x) { return (int) x; }
+double ceil(double x) { return ((int) x) + 1; }
+
+int round(double x) {
+    double f = floor(x);
+    double decimal = x - f;
+    if (decimal > 0.5) { return f + 1; }
+    return f;
+}
+
+// refer to 'goofy aah pow algo.png'
