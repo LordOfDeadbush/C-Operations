@@ -71,4 +71,16 @@ int round(double x) {
     return f;
 }
 
-// refer to 'goofy aah pow algo.png'
+/*
+explanation of pow inplementation:
+for pow, we need to do this:
+a^(bc/c)
+here we creatively use the root function:
+root[c](a)^bc
+this is so we dont get partial roots.
+a possibility is to run this through multiple times so we get a better approximation (if we make better root function)
+*/
+double pow(double x, double n) {
+    double exp_const = pow(10, MAX_DECIMAL_PRECISION);
+    return _int_pow(_int_root(x, exp_const), exp_const * n);
+}
