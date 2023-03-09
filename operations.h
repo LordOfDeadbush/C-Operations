@@ -3,7 +3,7 @@ const double PI = 3.14159265358979323846;
 const double MAX_DECIMAL_PRECISION = 7;
 
 
-double abs(double x) {
+double absolute(double x) {
     if (x < 0) return -x;
     return x;
 }
@@ -11,7 +11,7 @@ double abs(double x) {
 
 double _int_pow(double x, int n) {
     double result = 1;
-    for (int i = 0; i < abs(n); i++) {
+    for (int i = 0; i < absolute(n); i++) {
         result *= x;
     }
     if (n > 0) return result;
@@ -26,7 +26,7 @@ just below, and continue to the next step.
 we then do this for the first fifteen digits after the decimal 
 */
 double _int_root(double x, int n) { // this version of root is to find the nth root of a number where n is an integer
-    int exp = abs(n);
+    int exp = absolute(n);
     double root = 0;
 
     while (_int_pow(root, exp) < x) { root++; }
@@ -49,7 +49,7 @@ double _int_root(double x, int n) { // this version of root is to find the nth r
 
 
 
-double ln(double x) {
+double naturalLog(double x) {
     // explanation here: https://en.wikipedia.org/wiki/Natural_logarithm#Integral_definition
     double sum = 0;
     double step = _int_pow(0.1, 15);
@@ -59,8 +59,8 @@ double ln(double x) {
     return sum;
 }
 
-double log(double x, double n) { // in the form log sub a
-    return ln(x) / ln(n);
+double customLog(double x, double n) { // in the form log sub a
+    return naturalLog(x) / naturalLog(n);
 }
 
 double floor(double x) { return (int) x; }
