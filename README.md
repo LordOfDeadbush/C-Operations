@@ -12,10 +12,17 @@ Various operation implementations in C for my calculator project
 * Floor
 * Ceil
 * Pow
+* Factorial
 
 ## Functions in development
 
 * Trig Functions
+  * Sine
+  * Cosine
+  * Tangent
+  * Secant
+  * Cosecant
+  * Cotangent
 * Root
 * Better pow
 * Better root

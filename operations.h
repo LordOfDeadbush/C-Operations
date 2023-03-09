@@ -86,3 +86,11 @@ double pow(double x, double n) {
     double exp_const = pow(10, MAX_DECIMAL_PRECISION);
     return _int_pow(_int_root(x, exp_const), exp_const * n);
 }
+
+int factorial(int x) {
+    int result = 1;
+    for (int i = x; i > 1; i--) {
+        result *= i;
+    }
+    return result;
+}
